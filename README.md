@@ -1,6 +1,6 @@
 :airplane: paperplane
 ============
-Ridiculously Simple &amp; Free Backend  for Your Web Forms.
+Ridiculously simple & free backend  for your web forms. Powered by JAWS.
 
 **Status: Under Heavy Development**
 
