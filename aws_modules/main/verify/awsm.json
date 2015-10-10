@@ -1,0 +1,54 @@
+{
+  "lambda": {
+    "envVars": [],
+    "deploy": false,
+    "package": {
+      "optimize": {
+        "builder": "browserify",
+        "minify": true,
+        "ignore": [],
+        "exclude": [
+          "aws-sdk"
+        ],
+        "includePaths": []
+      },
+      "excludePatterns": []
+    },
+    "cloudFormation": {
+      "Description": "",
+      "Handler": "aws_modules/main/index/handler.handler",
+      "MemorySize": 1024,
+      "Runtime": "nodejs",
+      "Timeout": 6
+    }
+  },
+  "apiGateway": {
+    "deploy": false,
+    "cloudFormation": {
+      "Type": "AWS",
+      "Path": "verify",
+      "Method": "GET",
+      "AuthorizationType": "none",
+      "ApiKeyRequired": false,
+      "RequestTemplates": {
+        "application/json": "{\"url\":\"$util.urlDecode($input.params('url'))\"}"
+      },
+      "RequestParameters": {
+        "integration.request.querystring.integrationQueryParam": "method.request.querystring.url"
+      },
+      "Responses": {
+        "400": {
+          "statusCode": "400"
+        },
+        "default": {
+          "statusCode": "200",
+          "responseParameters": {},
+          "responseModels": {},
+          "responseTemplates": {
+            "application/json": ""
+          }
+        }
+      }
+    }
+  }
+}

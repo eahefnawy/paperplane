@@ -1,0 +1,26 @@
+{
+  "name": "paperplane",
+  "version": "0.0.1",
+  "location": "https://github.com/...",
+  "author": "",
+  "description": "",
+  "domain": "paperplane.eahefnawy.com",
+  "stages": {
+    "dev": [
+      {
+        "region": "us-east-1",
+        "iamRoleArnLambda": "arn:aws:iam::552750238299:role/dev-paperplane-r-IamRoleLambda-1OML4BSIL0VFM",
+        "iamRoleArnApiGateway": "arn:aws:iam::552750238299:role/dev-paperplane-r-IamRoleApiGateway-VEY4VW4NPDF",
+        "jawsBucket": "jaws.dev.useast1.paperplane.eahefnawy.com"
+      }
+    ],
+    "prod": [
+      {
+        "region": "us-east-1",
+        "iamRoleArnLambda": "arn:aws:iam::552750238299:role/prod-paperplane-r-IamRoleLambda-1X258QWW5ZS2B",
+        "iamRoleArnApiGateway": "arn:aws:iam::552750238299:role/prod-paperplane-r-IamRoleApiGateway-XDQD957G32KK",
+        "jawsBucket": "jaws.prod.useast1.paperplane.eahefnawy.com"
+      }
+    ]
+  }
+}
