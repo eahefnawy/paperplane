@@ -114,7 +114,7 @@ module.exports.run = function(event, context, cb) {
       });
     }
   };
-  console.log(process.env.TABLE_NAME)
+
   var params = {
     TableName: process.env.TABLE_NAME,
     Key: {
