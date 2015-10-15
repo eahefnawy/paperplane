@@ -11,7 +11,8 @@
         "region": "us-east-1",
         "iamRoleArnLambda": "arn:aws:iam::552750238299:role/dev-paperplane-r-IamRoleLambda-1OML4BSIL0VFM",
         "iamRoleArnApiGateway": "arn:aws:iam::552750238299:role/dev-paperplane-r-IamRoleApiGateway-VEY4VW4NPDF",
-        "jawsBucket": "jaws.dev.useast1.paperplane.eahefnawy.com"
+        "jawsBucket": "jaws.dev.useast1.paperplane.eahefnawy.com",
+        "restApiId": "4ol02g1g9h"
       }
     ],
     "prod": [

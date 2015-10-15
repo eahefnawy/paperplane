@@ -1,1 +1,9 @@
-{}
+{ 
+    "email": "eahefnawy@gmail.com",
+    "payload": {
+      "first_name" : "Sam",
+      "last_name"  : "Smith",
+      "email"      : "sam@smith.com",
+      "message"    : "Hello from PaperPlane!"
+    }
+  }

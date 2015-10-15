@@ -1,0 +1,48 @@
+{
+  "name": "main",
+  "version": "0.0.1",
+  "location": "https://github.com/eahefnawy/paperplane",
+  "author": "Eslam A. Hefnawy <eahefnawy@gmail.com>",
+  "description": "",
+  "resources": {
+    "cloudFormation": {
+      "ApiGatewayIamPolicyDocumentStatements": [],
+      "LambdaIamPolicyDocumentStatements": [
+         {
+           "Effect": "Allow",
+           "Action": [ "*" ],
+           "Resource": {
+             "Fn::Join": [
+               ":",
+               [ "arn:aws:dynamodb", { "Ref": "AWS::Region" }, "*", "table/paperplane" ]
+             ]
+           }
+         }
+      ],
+      "Resources": {
+        "DynamoDB": {
+          "Type" : "AWS::DynamoDB::Table",
+          "Properties": {
+            "AttributeDefinitions": [
+              {
+                "AttributeName": "email",
+                "AttributeType": "S"
+              }
+            ],
+            "KeySchema" : [
+              {
+                "AttributeName": "email",
+                "KeyType": "HASH"
+              }
+            ],
+            "ProvisionedThroughput" : {
+              "ReadCapacityUnits":  { "Ref" : "aaDefaultDynamoRWThroughput" },
+              "WriteCapacityUnits": { "Ref" : "aaDefaultDynamoRWThroughput" }
+            },
+            "TableName": "paperplane"
+          }
+        }
+      }
+    }
+  }
+}

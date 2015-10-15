@@ -71,7 +71,7 @@ module.exports.run = function(event, context, cb) {
       subject: 'Data Received!',
       template: 'data',
       context: {
-        data: event.data
+        data: JSON.stringify(event.data, null, 4)
       }
     };
     var params = {
@@ -114,7 +114,7 @@ module.exports.run = function(event, context, cb) {
       });
     }
   };
-
+  console.log(process.env.TABLE_NAME)
   var params = {
     TableName: process.env.TABLE_NAME,
     Key: {
