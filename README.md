@@ -1,6 +1,6 @@
-paperplane
+:airplane: paperplane
 ===========
-:airplane: Ridiculously simple & free backend  for your web forms. Powered by the [JAWS Framework](https://github.com/jaws-framework/JAWS).
+Ridiculously simple & free backend  for your web forms. Powered by the [JAWS Framework](https://github.com/jaws-framework/JAWS).
 
 Just connect your web form to our API endpoint, and we'll email you form submissions as they happen. **If this is the first time you POST to our API with this email address, you'll need to verify your email first.** So submit the form at least once to receive the verification email. After your email is verified, you'll be able to receive form submissions!
 
